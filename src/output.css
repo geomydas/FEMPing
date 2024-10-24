@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.0-alpha.28 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.0-alpha.29 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root {
@@ -623,6 +623,9 @@
   .table {
     display: table;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .size-10 {
     width: var(--spacing-10, 2.5rem);
     height: var(--spacing-10, 2.5rem);
@@ -827,21 +830,6 @@
   .transition-none {
     transition-property: none;
   }
-  .peer-\[\:user-invalid\]\:visible {
-    &:is(:where(.peer):is(:user-invalid) ~ *) {
-      visibility: visible;
-    }
-  }
-  .peer-\[\:user-invalid\]\:block {
-    &:is(:where(.peer):is(:user-invalid) ~ *) {
-      display: block;
-    }
-  }
-  .peer-\[\:user-invalid\]\:bg-red {
-    &:is(:where(.peer):is(:user-invalid) ~ *) {
-      background-color: var(--color-red, hsl(354, 100%, 66%));
-    }
-  }
   .hover\:bg-blue {
     &:hover {
       @media (hover: hover) {
@@ -864,13 +852,6 @@
       }
     }
   }
-  .hover\:filter {
-    &:hover {
-      @media (hover: hover) {
-        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-      }
-    }
-  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
@@ -884,11 +865,6 @@
   .md\:justify-center {
     @media (width >= 48rem) {
       justify-content: center;
-    }
-  }
-  .\[\:user-invalid\]\:bg-red-400 {
-    &:is(:user-invalid) {
-      background-color: var(--color-red-400, #f87171);
     }
   }
   .\[\:user-invalid\]\:text-red {
