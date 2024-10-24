@@ -830,6 +830,13 @@
   .transition-none {
     transition-property: none;
   }
+  .group-hover\:fill-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        fill: var(--color-white, #fff);
+      }
+    }
+  }
   .hover\:bg-blue {
     &:hover {
       @media (hover: hover) {
