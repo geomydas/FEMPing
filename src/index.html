@@ -82,11 +82,16 @@
                 id="email"
                 name="email"
                 placeholder="Your email address..."
+                autocomplete="off"
+                aria-describedby="error-message"
+                aria-required="true"
+                aria-invalid="false"
                 required
-                class="font-librefranklin peer text-gray outline-paleblue [:user-invalid]:outline-red [:user-invalid]:text-red h-10 rounded-full border-transparent px-4 shadow-sm outline-1"
+                class="font-librefranklin peer text-gray outline-paleblue h-10 rounded-full border-transparent px-4 shadow-sm outline-2"
               />
               <span
-                class="font-librefranklin text-red peer-[:user-invalid]:visibleq invisible block text-center text-sm font-normal italic"
+                id="error-message"
+                class="font-librefranklin text-red invisible my-2 block text-center text-sm font-normal italic md:text-left"
                 >Please provide a valid email address</span
               >
             </div>
@@ -141,7 +146,7 @@
             </a>
           </li>
           <li
-            class="hover:bg-blue outline-gray size-10 rounded-full group p-2 outline-1 transition"
+            class="hover:bg-blue outline-gray group size-10 rounded-full p-2 outline-1 transition"
           >
             <a href="#" aria-label="Instagram">
               <svg
